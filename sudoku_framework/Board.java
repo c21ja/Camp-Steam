@@ -17,6 +17,7 @@ public class Board{
         int counter = 0;
         int val;
         State state;
+        int tile_num=1;
 
         for (int i = 0; i < this.NUM_ROWS; ++i){
             for (int j = 0; j < this.NUM_COLS; ++j){
@@ -28,7 +29,9 @@ public class Board{
                     state = State.PERMANENT;
                 }
                 board[i][j] = new Tile(val, state);
-                ++counter;
+                board[i][j].setTileNumber(tile_num);
+                tile_num=tile_num+1;
+                counter++;
             }
         }
     }

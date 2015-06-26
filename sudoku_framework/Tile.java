@@ -1,6 +1,7 @@
 public class Tile{
 
     private int value;
+    int tile_number;
     private State state;
     private int [] availableMoves;
 
@@ -19,6 +20,14 @@ public class Tile{
             this.availableMoves = new int [] {value};
         }
         this.state = state;
+    }
+
+    public int getTileNumber(){
+        return this.tile_number;
+    }
+
+    public void setTileNumber(int num){
+        this.tile_number=num;
     }
 
     public int [] getAvailableMoves(){
